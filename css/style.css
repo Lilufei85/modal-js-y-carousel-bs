@@ -1,0 +1,240 @@
+
+
+
+/*REGLAS ESPECIALES GALERIA*/
+.imgGallery h2 {
+    text-align: center; }
+  
+  .container-fotos {
+    /***  G R I D S  ***/
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: auto;
+    width: 100%;
+    row-gap: 10px;
+    column-gap: 15px;
+    justify-content: center;
+    justify-items: center;
+    grid-template-areas: "foto-1 foto-2 foto-3" 
+   "foto-4 foto-5 foto-6"
+   "foto-7 foto-8 foto-9"
+   "foto-10 foto-11 foto-12"
+   "foto-13 foto-14 foto-15"
+   "foto-16 foto-17 foto-18"
+   "foto-19 foto-20 foto-21"
+   "foto-22 foto-23 foto-24"; }
+    .container-fotos img:hover {
+      /***  T R A N S I C I O N  ***/
+      transform: scale(1.1);
+      /*-webkit-animation: 700ms ease-in;
+          animation: 700ms ease-in both;*/ }
+  
+  .foto {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 400px; }
+  
+  .foto-1 {
+    grid-area: foto-1;
+    transition: transform 700ms 0s;
+    /*esta transition afecta al transform, tiempo de duracion, delay*/
+    /*background-image: url("../assets/img/desktop/domo1-t.jpg");PARA PROBAR LUEGO DE ESTA ENTREGA!
+      z-index: 2;*/ }
+  
+  .foto-2 {
+    grid-area: foto-2;
+    transition: transform 700ms 0s; }
+  
+  .foto-3 {
+    grid-area: foto-3;
+    transition: transform 700ms 0s; }
+  
+  .foto-4 {
+    grid-area: foto-4;
+    transition: transform 700ms 0s; }
+  
+  .foto-5 {
+    grid-area: foto-5;
+    transition: transform 700ms 0s; }
+  
+  .foto-6 {
+    grid-area: foto-6;
+    transition: transform 700ms 0s; }
+  
+  .foto-7 {
+    grid-area: foto-7;
+    transition: transform 700ms 0s; }
+  
+  .foto-8 {
+    grid-area: foto-8;
+    transition: transform 700ms 0s; }
+  
+  .foto-9 {
+    grid-area: foto-9;
+    transition: transform 700ms 0s; }
+  
+  .foto-10 {
+    grid-area: foto-10;
+    transition: transform 700ms 0s; }
+  
+  .foto-11 {
+    grid-area: foto-11;
+    transition: transform 700ms 0s; }
+  
+  .foto-12 {
+    grid-area: foto-12;
+    transition: transform 700ms 0s; }
+  
+  .foto-13 {
+    grid-area: foto-13;
+    transition: transform 700ms 0s; }
+  
+  .foto-14 {
+    grid-area: foto-14;
+    transition: transform 700ms 0s; }
+  
+  .foto-15 {
+    grid-area: foto-15;
+    transition: transform 700ms 0s; }
+  
+  .foto-16 {
+    grid-area: foto-16;
+    transition: transform 700ms 0s; }
+  
+  .foto-17 {
+    grid-area: foto-17;
+    transition: transform 700ms 0s; }
+  
+  .foto-18 {
+    grid-area: foto-18;
+    transition: transform 700ms 0s; }
+  
+  .foto-19 {
+    grid-area: foto-19;
+    transition: transform 700ms 0s; }
+  
+  .foto-20 {
+    grid-area: foto-20;
+    transition: transform 700ms 0s; }
+  
+  .foto-21 {
+    grid-area: foto-21;
+    transition: transform 700ms 0s; }
+  
+  .foto-22 {
+    grid-area: foto-22;
+    transition: transform 700ms 0s; }
+  
+  .foto-23 {
+    grid-area: foto-23;
+    transition: transform 700ms 0s; }
+  
+  .foto-24 {
+    grid-area: foto-24;
+    transition: transform 700ms 0s; }
+
+/***/
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    background-color: #0b1f2a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.contenedor-modal {
+    width: 90%;
+    max-height: 90vh;
+    background-color: wheat;
+    margin: auto;
+}
+
+.modal-img {
+    width: 80%;
+    height: 90vh;
+    position: center;
+}
+
+.modal-close {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #0b1f2a;
+    padding: 10px 30px;
+    border: 1px solid ;
+    border-radius: 6px;
+    font-weight: 300;
+    display: inline-block;
+    transition: background-color .3s;
+}
+
+
+.modal-close:hover {
+    color: #0b1f2a;
+    background-color: white;
+}
+
+
+.modal-show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+
+
+/*CAROUSEL*/
+
+.bg-container-carousel {
+    --bs-bg-opacity: 0.1;
+}
+
+.color-control { /*work im progress:queriendo cambiar el color de los controles prev-next*/
+    color: #153c50;
+    --bs-button-color: #153c50;
+    --bs-span-color: #153c50;
+
+}
+
+.carousel-item {
+    width: fit-content;
+}
+
+.carousel-caption {
+    color: black;
+    background-color: whitesmoke;
+    opacity: 50%;
+    font-family: 'Anton', sans-serif; 
+    padding: 10px; 
+}
+
+.carousel-caption p {
+    margin: 0;
+}
+
+.carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+}
+.carousel-control-prev-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.foto-c {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    height: 600px;
+    width: 900px;
+} 
